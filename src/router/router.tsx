@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom'
-import { Chat } from '../pages/Chat.tsx'
-import { Join } from '../pages/Join.tsx'
+import { Chat } from '../pages/Chat/Chat.tsx'
+import { Join } from '../pages/Join/Join.tsx'
 
 export const router = createBrowserRouter([
   {
