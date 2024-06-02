@@ -12,11 +12,10 @@ export const Join = () => {
   }
 
   const handleClick = (e: MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault()
     const isDisabled = Object.values(values).some((val) => val === '')
     if (!isDisabled) {
-      navigate(`/chat?name=${values.username}&room=${values.room}`)
-    } else {
-      e.preventDefault()
+      navigate(`/chat?username=${values.username}&room=${values.room}`)
     }
     return
   }
@@ -31,7 +30,7 @@ export const Join = () => {
               type="text"
               name={'username'}
               className={s.input}
-              value={values.username}
+              value={values.username ?? ''}
               placeholder={'Username'}
               onChange={handleChange}
               autoComplete="off"
@@ -42,7 +41,7 @@ export const Join = () => {
               type="text"
               name={'room'}
               className={s.input}
-              value={values.room}
+              value={values.room ?? ''}
               placeholder={'Room'}
               onChange={handleChange}
               autoComplete="off"
