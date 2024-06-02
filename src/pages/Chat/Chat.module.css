@@ -69,7 +69,7 @@
     text-align: center;
 }
 
-.button input {
+.button button {
     cursor: pointer;
     color: #fff;
 }
@@ -91,6 +91,7 @@
 
 .emoji img {
     vertical-align: middle;
+    width: 24px;
 }
 
 .emojies {
